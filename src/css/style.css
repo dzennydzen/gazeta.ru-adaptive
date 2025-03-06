@@ -1,32 +1,20 @@
-@font-face {
-  font-family: "FiraSans-Book";
-  src: url("../fonts/FiraSans-Book.otf") format("otf"), url("../fonts/FiraSans-Book.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "FiraSans-Light";
-  src: url("../fonts/FiraSans-Light.otf") format("otf"), url("../fonts/FiraSans-Light.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "FiraSans-Medium";
-  src: url("../fonts/FiraSans-Medium.otf") format("otf"), url("../fonts/FiraSans-Medium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "FiraSans-Regular";
-  src: url("../fonts/FiraSans-Regular.otf") format("otf"), url("../fonts/FiraSans-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Hoefler-Text";
-  src: url("../fonts/Hoefler-Text.ttc") format("ttc"), url("../fonts/hoeflertext.otf") format("otf");
-  font-weight: normal;
-  font-style: normal;
-}
+/* Error: There's already a module with namespace "index".
+ *     ,
+ * 1   | @use './common/index';
+ *     | ===================== original @use
+ * ... |
+ * 3   | @use './main/index';
+ *     | ^^^^^^^^^^^^^^^^^^^ new @use
+ *     '
+ *   src\scss\index.scss 3:1  root stylesheet */
 
-/*# sourceMappingURL=style.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: There's already a module with namespace \"index\".\a     \2577 \a 1   \2502  @use './common/index';\d\a     \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original @use\a... \2502 \a 3   \2502  @use './main/index';\a     \2502  ^^^^^^^^^^^^^^^^^^^ new @use\a     \2575 \a   src\\scss\\index.scss 3:1  root stylesheet";
+}
