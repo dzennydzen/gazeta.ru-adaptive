@@ -1,3 +1,32 @@
-
+@font-face {
+  font-family: "FiraSans-Book";
+  src: url("../fonts/FiraSans-Book.otf") format("otf"), url("../fonts/FiraSans-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraSans-Light";
+  src: url("../fonts/FiraSans-Light.otf") format("otf"), url("../fonts/FiraSans-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraSans-Medium";
+  src: url("../fonts/FiraSans-Medium.otf") format("otf"), url("../fonts/FiraSans-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FiraSans-Regular";
+  src: url("../fonts/FiraSans-Regular.otf") format("otf"), url("../fonts/FiraSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Hoefler-Text";
+  src: url("../fonts/Hoefler-Text.ttc") format("ttc"), url("../fonts/hoeflertext.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*# sourceMappingURL=style.css.map */
