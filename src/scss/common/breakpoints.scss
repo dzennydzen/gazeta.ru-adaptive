@@ -1,5 +1,5 @@
 @mixin desktop {
-    @media (max-width: $breakpoint_desktop) {
+    @media (min-width: $breakpoint_desktop) {
         @content;
     }
 }
