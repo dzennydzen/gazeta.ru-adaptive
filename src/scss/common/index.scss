@@ -1,5 +1,16 @@
-@use 'extends';
-@use 'variables';
-@use 'mixins';
-@use 'fonts';
-@use 'breakpoints';
+@import 'extends';
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import 'breakpoints';
+
+
+body {
+    border: 1px solid black;
+    
+    .body_wrapper {
+        @include desktop {
+            border: 1px solid red;
+        }
+    }
+}
