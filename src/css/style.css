@@ -36,5 +36,21 @@ body {
     border: 1px solid red;
   }
 }
+@media (max-width: 1536px) {
+  body .body_wrapper {
+    border: 1px solid green;
+  }
+}
+@media (max-width: 750px) {
+  body .body_wrapper {
+    border: 1px solid yellow;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 
 /*# sourceMappingURL=style.css.map */
