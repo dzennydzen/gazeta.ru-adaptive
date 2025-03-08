@@ -13,17 +13,47 @@
 
         <div class="main_wrapper">
             <main class="main_content">
-                <header class="header"></header>
+                <header>
+                </header>
 
                 <div class="news_block1 news_block"></div>
                 <div class="news_block2 news_block"></div>
                 <div class="news_block3 news_block"></div>
 
-                <footer class="footer"></footer>
+                <footer></footer>
             </main>
         </div>
 
         <aside class="theme_panel left_panel"></aside> 
     </div> 
 </body>
+
+<style>
+    div, aside, header, footer, main {
+        border: 1px solid black;
+        box-sizing: border-box;
+    }
+
+    .body_wrapper {
+        display: flex;
+        min-width: 1680px;
+    }
+
+    .right_panel {
+        width: 80px;
+        height: 100vh;
+    }
+
+    .left_panel {
+        width: 270px;
+        height: 100vh;
+    }
+
+    header {
+        height: 360px;
+        flex-grow: 1;
+    }
+
+
+</style>
 </html>

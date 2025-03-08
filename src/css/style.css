@@ -28,23 +28,14 @@
   font-weight: normal;
   font-style: normal;
 }
-body {
-  border: 1px solid black;
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../fonts/Inter-Regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
 }
-@media (max-width: 1680px) {
-  body .body_wrapper {
-    border: 1px solid red;
-  }
-}
-@media (max-width: 1536px) {
-  body .body_wrapper {
-    border: 1px solid green;
-  }
-}
-@media (max-width: 750px) {
-  body .body_wrapper {
-    border: 1px solid yellow;
-  }
+body .body_wrapper {
+  border: 1px solid red;
 }
 
 * {

@@ -4,21 +4,8 @@
 @import 'fonts';
 @import 'breakpoints';
 
-
-body {
-    border: 1px solid black;
-    
+body {   
     .body_wrapper {
-        @include desktop {
-            border: 1px solid red;
-        }
-
-        @include tablet {
-            border: 1px solid green;
-        }
-
-        @include mobile {
-            border: 1px solid yellow;
-        }
+        border: 1px solid red;
     }
 }
