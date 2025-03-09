@@ -1,4 +1,4 @@
-@import './common/index';
-@import './header/header';
-@import './main/index';
-@import './utils/reset';
+@use './common/index' as *;
+@use './header/header' as *;
+@use './main/index'as *;
+@use './utils/reset'as *;

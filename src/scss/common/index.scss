@@ -1,8 +1,8 @@
-@import 'extends';
-@import 'variables';
-@import 'mixins';
-@import 'fonts';
-@import 'breakpoints';
+@use 'extends' as *;
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'fonts' as *;
+@use 'breakpoints' as *;
 
 html, body {
     height: 100%; 
