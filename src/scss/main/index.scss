@@ -1,0 +1,36 @@
+@include desktop {
+    .right_panel {
+        width: 80px;
+    }
+
+    .left_panel {
+        width: 270px;
+    }
+
+    .main_wrapper {
+        width: 100%;
+        border-color: green;
+        border-width: 3px;
+
+        .main_content {
+           @include flex(column);
+        }
+    }
+
+    .news_block1 {
+        @include size(100%, 1163px);
+    }
+
+    .news_block2 {
+        @include size(100%, 815px);
+    }
+
+    .news_block3 {
+        @include size(100%, 1300px);
+    }
+
+    footer {
+        @include size(100%, 549px);
+        background-color: black;
+    }
+}
