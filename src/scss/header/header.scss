@@ -3,10 +3,18 @@
 @use '../common/mixins' as mixins;
 
 header {
+    svg, .dollar, .euro {
+        border: none;
+    }
+
     @include breakpoints.desktop {
         @include mixins.size(100%, 360px);
         padding: 30px;
 
         background-color: #E9E9E9;
+
+        .header_top-content {
+            @include mixins.flex-align(row, space-between, center);
+        }
     }
 }

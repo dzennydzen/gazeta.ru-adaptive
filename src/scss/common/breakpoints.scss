@@ -2,7 +2,7 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 @use 'fonts' as *;
-@use 'breakpoints' as *;
+
 
 @mixin desktop {
     @media (min-width: $breakpoint_desktop) {

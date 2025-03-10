@@ -13,8 +13,7 @@
 
     .main_wrapper {
         width: 100%;
-        border-color: green;
-        border-width: 3px;
+        border-width: 2px;
 
         .main_content {
            @include mixins.flex(column);
