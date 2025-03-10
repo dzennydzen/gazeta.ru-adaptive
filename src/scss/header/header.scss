@@ -15,6 +15,13 @@ header {
 
         .header_top-content {
             @include mixins.flex-align(row, space-between, center);
+
+            .social_block {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+            }
+            
         }
     }
 }

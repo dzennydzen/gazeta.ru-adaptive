@@ -66,6 +66,11 @@ header svg, header .dollar, header .euro {
     justify-content: space-between;
     align-items: center;
   }
+  header .header_top-content .social_block {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
 }
 
 @media (min-width: 1680px) {
