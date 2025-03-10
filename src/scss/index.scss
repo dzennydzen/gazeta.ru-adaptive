@@ -2,3 +2,5 @@
 @use './header/header' as *;
 @use './main/index'as *;
 @use './utils/reset'as *;
+
+// $ sass --watch ./src/scss/index.scss:./src/css/style.css

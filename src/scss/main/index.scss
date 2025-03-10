@@ -1,4 +1,8 @@
-@include desktop {
+@use '../common/breakpoints' as breakpoints;
+@use '../common/variables' as variables;   
+@use '../common/mixins' as mixins;
+
+@include breakpoints.desktop {
     .right_panel {
         width: 80px;
     }
@@ -13,24 +17,24 @@
         border-width: 3px;
 
         .main_content {
-           @include flex(column);
+           @include mixins.flex(column);
         }
     }
 
     .news_block1 {
-        @include size(100%, 1163px);
+        @include mixins.size(100%, 1163px);
     }
 
     .news_block2 {
-        @include size(100%, 815px);
+        @include mixins.size(100%, 815px);
     }
 
     .news_block3 {
-        @include size(100%, 1300px);
+        @include mixins.size(100%, 1300px);
     }
 
     footer {
-        @include size(100%, 549px);
+        @include mixins.size(100%, 549px);
         background-color: black;
     }
 }

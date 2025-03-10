@@ -1,6 +1,10 @@
+@use '../common/breakpoints' as breakpoints;
+@use '../common/variables' as variables;   
+@use '../common/mixins' as mixins;
+
 header {
-    @include desktop {
-        @include size(100%, 360px);
+    @include breakpoints.desktop {
+        @include mixins.size(100%, 360px);
         padding: 30px;
 
         background-color: #E9E9E9;
