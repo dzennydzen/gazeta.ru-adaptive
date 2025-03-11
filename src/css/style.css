@@ -30,7 +30,7 @@
 }
 @font-face {
   font-family: "Inter-Regular";
-  src: url("../fonts/Inter-Regular.ttf") format("ttf");
+  src: url("../fonts/Inter-Regular.ttf") format("ttf"), url("../fonts/Inter-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -41,6 +41,7 @@ html, body {
 body * {
   border: 1px solid black;
   box-sizing: border-box;
+  font-family: "Inter-Regular";
 }
 body .body_wrapper {
   border: 1px solid red;
@@ -50,7 +51,7 @@ body .body_wrapper {
   align-items: stretch;
 }
 
-header svg, header .dollar, header .euro {
+header svg, header .dollar, header .euro, header img, header .photo_block, header .text_block {
   border: none;
 }
 @media (min-width: 1680px) {
@@ -70,6 +71,34 @@ header svg, header .dollar, header .euro {
     display: flex;
     gap: 20px;
     align-items: center;
+  }
+  header .header_main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transform: translateY(50%);
+    padding: 0 78px;
+  }
+  header .header_main-content .header_main-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 320px;
+  }
+  header .header_main-content .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header_main-content .logo .logo_text {
+    font-size: 59px;
+  }
+  header .header_main-content .logo .calendar {
+    text-align: center;
   }
 }
 

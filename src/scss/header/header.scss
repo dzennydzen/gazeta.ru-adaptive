@@ -3,7 +3,7 @@
 @use '../common/mixins' as mixins;
 
 header {
-    svg, .dollar, .euro {
+    svg, .dollar, .euro, img, .photo_block, .text_block {
         border: none;
     }
 
@@ -22,6 +22,32 @@ header {
                     align-items: center;
             }
             
+        }
+
+        .header_main-content {
+            @include mixins.flex-align(row, space-between, center);
+
+            position: relative;
+            transform: translateY(50%);
+
+            padding: 0 78px;
+
+            .header_main-block {
+                @include mixins.flex-align(row, center, center);
+                max-width: 320px;
+            }
+
+            .logo {
+                @include mixins.flex-align(column, center, center);
+
+                .logo_text {
+                    font-size: 59px;
+                }
+
+                .calendar {
+                    text-align: center;
+                }
+            }
         }
     }
 }
