@@ -19,3 +19,7 @@
     height: $height;
 }
 
+@mixin font-size-lp($size, $letter-spacing) {
+    font-size: $size;
+    letter-spacing: $letter-spacing;
+}

@@ -3,7 +3,7 @@
 @use '../common/mixins' as mixins;
 
 header {
-    svg, .dollar, .euro, img, .photo_block, .text_block {
+    svg, img, .photo_block, .text_block {
         border: none;
     }
 
@@ -15,6 +15,14 @@ header {
 
         .header_top-content {
             @include mixins.flex-align(row, space-between, center);
+
+            .money_block {
+                @include mixins.font-size-lp(12px, 0.35px);
+
+                .dollar {
+                    margin: 0 15px;
+                }
+            }
 
             .social_block {
                     display: flex;
@@ -43,8 +51,7 @@ header {
                 @include mixins.flex-align(column, center, center);
 
                 .logo_text {
-                    font-size: 59px;
-                    letter-spacing: 1.75px;
+                    @include mixins.font-size-lp(59px, 1.75px)
                 }
 
                 .calendar {

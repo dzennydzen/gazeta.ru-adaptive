@@ -51,7 +51,7 @@ body .body_wrapper {
   align-items: stretch;
 }
 
-header svg, header .dollar, header .euro, header img, header .photo_block, header .text_block {
+header svg, header img, header .photo_block, header .text_block {
   border: none;
 }
 @media (min-width: 1680px) {
@@ -66,6 +66,13 @@ header svg, header .dollar, header .euro, header img, header .photo_block, heade
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  header .header_top-content .money_block {
+    font-size: 12px;
+    letter-spacing: 0.35px;
+  }
+  header .header_top-content .money_block .dollar {
+    margin: 0 15px;
   }
   header .header_top-content .social_block {
     display: flex;
