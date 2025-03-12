@@ -3,11 +3,14 @@
 @use '../common/mixins' as mixins;
 
 @include breakpoints.desktop {
-    .right_panel {
-        width: 80px;
+    .left_panel {
+        @include mixins.size(80px, 1050px);
+
+
+        background-color: #B11217;
     }
 
-    .left_panel {
+    .right_panel {
         width: 270px;
     }
 

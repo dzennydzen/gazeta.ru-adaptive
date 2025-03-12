@@ -35,6 +35,8 @@ header {
             .header_main-block {
                 @include mixins.flex-align(row, center, center);
                 max-width: 320px;
+
+                letter-spacing: 0.4px;
             }
 
             .logo {
@@ -42,6 +44,7 @@ header {
 
                 .logo_text {
                     font-size: 59px;
+                    letter-spacing: 1.75px;
                 }
 
                 .calendar {

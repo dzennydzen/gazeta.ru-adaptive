@@ -87,6 +87,7 @@ header svg, header .dollar, header .euro, header img, header .photo_block, heade
     justify-content: center;
     align-items: center;
     max-width: 320px;
+    letter-spacing: 0.4px;
   }
   header .header_main-content .logo {
     display: flex;
@@ -96,6 +97,7 @@ header svg, header .dollar, header .euro, header img, header .photo_block, heade
   }
   header .header_main-content .logo .logo_text {
     font-size: 59px;
+    letter-spacing: 1.75px;
   }
   header .header_main-content .logo .calendar {
     text-align: center;
@@ -103,10 +105,12 @@ header svg, header .dollar, header .euro, header img, header .photo_block, heade
 }
 
 @media (min-width: 1680px) {
-  .right_panel {
-    width: 80px;
-  }
   .left_panel {
+    width: 80px;
+    height: 1050px;
+    background-color: #B11217;
+  }
+  .right_panel {
     width: 270px;
   }
   .main_wrapper {
