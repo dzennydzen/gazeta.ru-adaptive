@@ -34,6 +34,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "soc_font";
+  src: url("/src/icons/icon_font/soc_font.woff2"), url("/src/icons/icon_font/soc_font.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 html, body {
   height: 100%;
 }
@@ -51,7 +57,7 @@ body .body_wrapper {
   align-items: stretch;
 }
 
-header svg, header img, header .photo_block, header .text_block {
+header svg, header img, header .photo_block, header .text_block, header i, header .mail, header .icon {
   border: none;
 }
 @media (min-width: 1680px) {
@@ -78,6 +84,19 @@ header svg, header img, header .photo_block, header .text_block {
     display: flex;
     gap: 20px;
     align-items: center;
+  }
+  header .header_top-content .social_block .icon {
+    font-family: "soc_font";
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-transform: none;
+  }
+  header .header_top-content .social_block i {
+    border: none;
+  }
+  header .header_top-content .social_block .mail::before {
+    content: "\e802";
   }
   header .header_main-content {
     display: flex;
