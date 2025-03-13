@@ -26,26 +26,44 @@ header {
 
             .social_block {
                     display: flex;
-                    gap: 20px;
                     align-items: center;
 
                     .icon {
                         font-family: 'soc_font';
-                        font-weight: normal;
                         font-style: normal;
 
                         display: inline-block;
-                        text-transform: none;
+
+                        &_mail::before {
+                            content: '\e802';
+                            font-size: 20px;
+                        }
+
+                        &_fb::before {
+                            content: '\e800';
+                            font-size: 20px;
+                        }
+
+                        &_tw::before {
+                            content: '\e804';
+                            font-size: 23px;
+                        }
+
+                        &_google::before {
+                            content: '\e801';
+                            font-size: 20px;
+                        }
+
+                        &_vk::before {
+                            content: '\e805';
+                            font-size: 25px;
+                        }
+
+                        &_rss::before {
+                            content: '\e803';
+                            font-size: 17px;
+                        }
                       }
-
-                      i {
-                        border: none;
-                      }
-
-                    .mail::before {
-                        content: '\e802';
-
-                    }
             }
             
         }

@@ -82,21 +82,36 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   }
   header .header_top-content .social_block {
     display: flex;
-    gap: 20px;
     align-items: center;
   }
   header .header_top-content .social_block .icon {
     font-family: "soc_font";
-    font-weight: normal;
     font-style: normal;
     display: inline-block;
-    text-transform: none;
   }
-  header .header_top-content .social_block i {
-    border: none;
-  }
-  header .header_top-content .social_block .mail::before {
+  header .header_top-content .social_block .icon_mail::before {
     content: "\e802";
+    font-size: 20px;
+  }
+  header .header_top-content .social_block .icon_fb::before {
+    content: "\e800";
+    font-size: 20px;
+  }
+  header .header_top-content .social_block .icon_tw::before {
+    content: "\e804";
+    font-size: 23px;
+  }
+  header .header_top-content .social_block .icon_google::before {
+    content: "\e801";
+    font-size: 20px;
+  }
+  header .header_top-content .social_block .icon_vk::before {
+    content: "\e805";
+    font-size: 25px;
+  }
+  header .header_top-content .social_block .icon_rss::before {
+    content: "\e803";
+    font-size: 17px;
   }
   header .header_main-content {
     display: flex;
