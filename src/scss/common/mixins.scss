@@ -38,3 +38,14 @@
     font-size: $size;
     color: $color;
 }
+
+//pseudo-elems
+
+@mixin pseudo-elem($content, $position: absolute, $top, $right, $bottom, $left) {
+    content: $content;
+    position: $position;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}

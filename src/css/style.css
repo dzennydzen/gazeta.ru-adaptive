@@ -84,7 +84,10 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   header .header_top-content .money_block .dollar::before {
     content: url("/src/icons/ico_dollar.svg");
     position: absolute;
+    top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
   }
   header .header_top-content .money_block .euro {
     margin-left: 28px;
@@ -92,7 +95,10 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   header .header_top-content .money_block .euro::before {
     content: url("/src/icons/ico_euro.svg");
     position: absolute;
+    top: 0;
     left: 75px;
+    right: 0;
+    bottom: 0;
   }
   header .header_top-content .social_block {
     position: relative;
@@ -101,12 +107,7 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  }
-  header .header_top-content .social_block i {
-    margin-right: 27px;
-  }
-  header .header_top-content .social_block i:last-child {
-    margin: 0;
+    gap: 27px;
   }
   header .header_top-content .social_block .icon {
     font-family: "soc_font";
@@ -158,7 +159,10 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   header .header_top-content .pension::before {
     content: url("/src/icons/ico_pension.svg");
     position: absolute;
+    top: 0;
     left: 0;
+    right: 0;
+    bottom: 75px;
   }
   header .header_main-content {
     display: flex;
@@ -199,7 +203,10 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   header .header_main-content .logo .weather::before {
     content: url("/src/icons/cloud_ico.svg");
     position: absolute;
+    top: 0;
     left: -20px;
+    right: 0;
+    bottom: 0;
   }
   header .header_main-content .logo .info_block {
     font-size: 15px;
@@ -221,7 +228,10 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   }
   header .header_main-content .header_main-block:last-child .info_block {
     font-size: 11px;
+    letter-spacing: 0;
     display: flex;
+    flex-direction: row;
+    justify-content: stretch;
     align-items: center;
   }
   header .header_main-content .header_main-block:last-child .time {
@@ -231,7 +241,10 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   header .header_main-content .header_main-block:last-child .time::before {
     content: url("/src/icons/ico_clock.svg");
     position: absolute;
+    top: 0;
     left: -20px;
+    right: 0;
+    bottom: 0;
     transform: translateY(20%);
   }
 }

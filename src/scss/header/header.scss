@@ -24,9 +24,7 @@ header {
                     margin-left: 16px;
 
                     &::before {
-                        content: url('/src/icons/ico_dollar.svg');
-                        position: absolute;
-                        left: 0;
+                        @include mixins.pseudo-elem(url('/src/icons/ico_dollar.svg'), absolute, 0, 0, 0, 0);
                     }
                 }
 
@@ -34,9 +32,7 @@ header {
                     margin-left: 28px;
 
                     &::before {
-                        content: url('/src/icons/ico_euro.svg');
-                        position: absolute;
-                        left: 75px;
+                        @include mixins.pseudo-elem(url('/src/icons/ico_euro.svg'), absolute, 0, 0, 0, 75px);
                     }
                 }
             }
@@ -46,14 +42,7 @@ header {
                 transform: translateX(8%);
                 
                 @include mixins.flex-align(row, center, center);
-
-                    i {
-                        margin-right: 27px;
-                    }
-
-                    i:last-child {
-                        margin: 0;
-                    }
+                gap: 27px;
 
                     .icon {
                         font-family: 'soc_font';
@@ -62,33 +51,27 @@ header {
                         display: inline-block;
 
                         &_mail::before {
-                            content: '\e802';
-                            @include mixins.text-size-color(17px, #858585);
+                            @include mixins.social-icon('\e802', 17px, #858585);
                         }
 
                         &_fb::before {
-                            content: '\e800';
-                            @include mixins.text-size-color(17px, #AAAAAA);
+                            @include mixins.social-icon('\e800', 17px, #AAAAAA);
                         }
 
                         &_tw::before {
-                            content: '\e804';
-                            @include mixins.text-size-color(20px, #AAAAAA);
+                            @include mixins.social-icon('\e804', 20px, #AAAAAA);
                         }
 
                         &_google::before {
-                            content: '\e801';
-                            @include mixins.text-size-color(17px, #AAAAAA);
+                            @include mixins.social-icon('\e801', 17px, #AAAAAA);
                         }
 
                         &_vk::before {
-                            content: '\e805';
-                            @include mixins.text-size-color(20px, #838383);
+                            @include mixins.social-icon('\e805', 20px, #838383);
                         }
 
                         &_rss::before {
-                            content: '\e803';
-                            @include mixins.text-size-color(17px, #838383);
+                            @include mixins.social-icon('\e803', 17px, #838383);
                         }
                       }
                 }
@@ -104,9 +87,7 @@ header {
                     @include mixins.font-size-lp(13px, 0.35px);
 
                     &::before {
-                        content: url('/src/icons/ico_pension.svg');
-                        position: absolute;
-                        left: 0;
+                        @include mixins.pseudo-elem(url('/src/icons/ico_pension.svg'), absolute, 0, 0, 75px, 0);
                     }
                 }
             
@@ -144,9 +125,7 @@ header {
                     position: relative;
 
                     &::before {
-                        content: url('/src/icons/cloud_ico.svg');
-                        position: absolute;
-                        left: -20px;
+                        @include mixins.pseudo-elem(url('/src/icons/cloud_ico.svg'), absolute, 0, 0, 0, -20px);
                     }
                 }
 
@@ -171,9 +150,8 @@ header {
                 }
 
                 .info_block {
-                    font-size: 11px;
-                    display: flex;
-                    align-items: center;
+                    @include mixins.font-size-lp(11px, 0);
+                    @include mixins.flex-align(row, stretch, center);
                 }
 
                 .time {
@@ -181,9 +159,7 @@ header {
                     position: relative;
 
                     &::before {
-                        content: url('/src/icons/ico_clock.svg');
-                        position: absolute;
-                        left: -20px;
+                        @include mixins.pseudo-elem(url('/src/icons/ico_clock.svg'), absolute, 0, 0, 0, -20px);
                         transform: translateY(20%);
                     }
                 }
