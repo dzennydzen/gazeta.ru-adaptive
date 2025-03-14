@@ -76,13 +76,37 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   header .header_top-content .money_block {
     font-size: 12px;
     letter-spacing: 0.35px;
+    position: relative;
   }
   header .header_top-content .money_block .dollar {
-    margin: 0 15px;
+    margin-left: 16px;
+  }
+  header .header_top-content .money_block .dollar::before {
+    content: url("/src/icons/ico_dollar.svg");
+    position: absolute;
+    left: 0;
+  }
+  header .header_top-content .money_block .euro {
+    margin-left: 28px;
+  }
+  header .header_top-content .money_block .euro::before {
+    content: url("/src/icons/ico_euro.svg");
+    position: absolute;
+    left: 75px;
   }
   header .header_top-content .social_block {
+    position: relative;
+    transform: translateX(8%);
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+  }
+  header .header_top-content .social_block i {
+    margin-right: 27px;
+  }
+  header .header_top-content .social_block i:last-child {
+    margin: 0;
   }
   header .header_top-content .social_block .icon {
     font-family: "soc_font";
@@ -91,36 +115,59 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   }
   header .header_top-content .social_block .icon_mail::before {
     content: "\e802";
-    font-size: 20px;
+    font-size: 17px;
+    color: #858585;
   }
   header .header_top-content .social_block .icon_fb::before {
     content: "\e800";
-    font-size: 20px;
+    font-size: 17px;
+    color: #AAAAAA;
   }
   header .header_top-content .social_block .icon_tw::before {
     content: "\e804";
-    font-size: 23px;
+    font-size: 20px;
+    color: #AAAAAA;
   }
   header .header_top-content .social_block .icon_google::before {
     content: "\e801";
-    font-size: 20px;
+    font-size: 17px;
+    color: #AAAAAA;
   }
   header .header_top-content .social_block .icon_vk::before {
     content: "\e805";
-    font-size: 25px;
+    font-size: 20px;
+    color: #838383;
   }
   header .header_top-content .social_block .icon_rss::before {
     content: "\e803";
     font-size: 17px;
+    color: #838383;
+  }
+  header .header_top-content .pension_block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header_top-content .pension {
+    padding-left: 19px;
+    position: relative;
+    font-size: 13px;
+    letter-spacing: 0.35px;
+  }
+  header .header_top-content .pension::before {
+    content: url("/src/icons/ico_pension.svg");
+    position: absolute;
+    left: 0;
   }
   header .header_main-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 78px;
     position: relative;
     transform: translateY(50%);
-    padding: 0 78px;
   }
   header .header_main-content .header_main-block {
     display: flex;
@@ -128,7 +175,7 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
     justify-content: center;
     align-items: center;
     max-width: 320px;
-    letter-spacing: 0.4px;
+    line-height: 22.5px;
   }
   header .header_main-content .logo {
     display: flex;
@@ -139,9 +186,53 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   header .header_main-content .logo .logo_text {
     font-size: 59px;
     letter-spacing: 1.75px;
+    padding-bottom: 24px;
   }
   header .header_main-content .logo .calendar {
     text-align: center;
+    margin-bottom: 11px;
+  }
+  header .header_main-content .logo .weather {
+    margin-left: 36px;
+    position: relative;
+  }
+  header .header_main-content .logo .weather::before {
+    content: url("/src/icons/cloud_ico.svg");
+    position: absolute;
+    left: -20px;
+  }
+  header .header_main-content .logo .info_block {
+    font-size: 15px;
+    letter-spacing: 0;
+  }
+  header .header_main-content .header_main-block:first-child {
+    font-size: 15px;
+    letter-spacing: 0.4px;
+  }
+  header .header_main-content .header_main-block:first-child .text_block {
+    margin-left: 25px;
+  }
+  header .header_main-content .header_main-block:last-child {
+    font-size: 13px;
+    letter-spacing: 0.35px;
+  }
+  header .header_main-content .header_main-block:last-child .text_block {
+    margin-left: 22px;
+  }
+  header .header_main-content .header_main-block:last-child .info_block {
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+  }
+  header .header_main-content .header_main-block:last-child .time {
+    margin-left: 27px;
+    position: relative;
+  }
+  header .header_main-content .header_main-block:last-child .time::before {
+    content: url("/src/icons/ico_clock.svg");
+    position: absolute;
+    left: -20px;
+    transform: translateY(20%);
   }
 }
 

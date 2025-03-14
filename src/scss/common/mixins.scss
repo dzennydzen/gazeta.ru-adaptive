@@ -23,3 +23,18 @@
     font-size: $size;
     letter-spacing: $letter-spacing;
 }
+
+//colors
+
+@mixin text-size-color($fontsize, $color) {
+    font-size: $fontsize;
+    color: $color;
+}
+
+//icons
+
+@mixin social-icon($content, $size, $color) {
+    content: $content;
+    font-size: $size;
+    color: $color;
+}

@@ -18,15 +18,42 @@ header {
 
             .money_block {
                 @include mixins.font-size-lp(12px, 0.35px);
+                position: relative;
 
                 .dollar {
-                    margin: 0 15px;
+                    margin-left: 16px;
+
+                    &::before {
+                        content: url('/src/icons/ico_dollar.svg');
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+
+                .euro {
+                    margin-left: 28px;
+
+                    &::before {
+                        content: url('/src/icons/ico_euro.svg');
+                        position: absolute;
+                        left: 75px;
+                    }
                 }
             }
 
             .social_block {
-                    display: flex;
-                    align-items: center;
+                position: relative;
+                transform: translateX(8%);
+                
+                @include mixins.flex-align(row, center, center);
+
+                    i {
+                        margin-right: 27px;
+                    }
+
+                    i:last-child {
+                        margin: 0;
+                    }
 
                     .icon {
                         font-family: 'soc_font';
@@ -36,62 +63,129 @@ header {
 
                         &_mail::before {
                             content: '\e802';
-                            font-size: 20px;
+                            @include mixins.text-size-color(17px, #858585);
                         }
 
                         &_fb::before {
                             content: '\e800';
-                            font-size: 20px;
+                            @include mixins.text-size-color(17px, #AAAAAA);
                         }
 
                         &_tw::before {
                             content: '\e804';
-                            font-size: 23px;
+                            @include mixins.text-size-color(20px, #AAAAAA);
                         }
 
                         &_google::before {
                             content: '\e801';
-                            font-size: 20px;
+                            @include mixins.text-size-color(17px, #AAAAAA);
                         }
 
                         &_vk::before {
                             content: '\e805';
-                            font-size: 25px;
+                            @include mixins.text-size-color(20px, #838383);
                         }
 
                         &_rss::before {
                             content: '\e803';
-                            font-size: 17px;
+                            @include mixins.text-size-color(17px, #838383);
                         }
                       }
-            }
+                }
+
+                .pension_block {
+                    @include mixins.flex-align(row, center, center);
+                }
+
+                .pension {
+                    padding-left: 19px;
+                    position: relative;
+
+                    @include mixins.font-size-lp(13px, 0.35px);
+
+                    &::before {
+                        content: url('/src/icons/ico_pension.svg');
+                        position: absolute;
+                        left: 0;
+                    }
+                }
             
         }
 
         .header_main-content {
             @include mixins.flex-align(row, space-between, center);
 
+            padding: 0 78px;
             position: relative;
             transform: translateY(50%);
 
-            padding: 0 78px;
-
             .header_main-block {
                 @include mixins.flex-align(row, center, center);
-                max-width: 320px;
 
-                letter-spacing: 0.4px;
+                max-width: 320px;
+                line-height: 22.5px;
             }
 
             .logo {
                 @include mixins.flex-align(column, center, center);
 
                 .logo_text {
-                    @include mixins.font-size-lp(59px, 1.75px)
+                    @include mixins.font-size-lp(59px, 1.75px);
+                    padding-bottom: 24px;
                 }
 
                 .calendar {
                     text-align: center;
+                    margin-bottom: 11px;
+                }
+
+                .weather {
+                    margin-left: 36px;
+                    position: relative;
+
+                    &::before {
+                        content: url('/src/icons/cloud_ico.svg');
+                        position: absolute;
+                        left: -20px;
+                    }
+                }
+
+                .info_block {
+                    @include mixins.font-size-lp(15px, 0);
+                }
+            }
+
+            .header_main-block:first-child {
+                @include mixins.font-size-lp(15px, 0.4px);
+
+                .text_block {
+                    margin-left: 25px;
+                }
+            }
+
+            .header_main-block:last-child {
+                @include mixins.font-size-lp(13px, 0.35px);
+
+                .text_block {
+                    margin-left: 22px;
+                }
+
+                .info_block {
+                    font-size: 11px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .time {
+                    margin-left: 27px;
+                    position: relative;
+
+                    &::before {
+                        content: url('/src/icons/ico_clock.svg');
+                        position: absolute;
+                        left: -20px;
+                        transform: translateY(20%);
+                    }
                 }
             }
         }
