@@ -1,6 +1,6 @@
 @use '../utils/breakpoints' as breakpoints;
-@use '../utils/variables' as variables;   
-@use '../utils/mixins' as mixins;
+@use '../utils/variables' as var;   
+@use '../utils/mixins' as mix;
 
 header {
     svg, img, .photo_block, .text_block, i, .mail, .icon {
@@ -8,23 +8,23 @@ header {
     }
 
     @include breakpoints.desktop {
-        @include mixins.size(100%, 360px);
+        @include mix.size(100%, 360px);
         padding: 30px;
 
-        background-color: #E9E9E9;
+        background-color: var.$white-smoke;
 
         .header_top-content {
-            @include mixins.flex-align(row, space-between, center);
+            @include mix.flex-align(row, space-between, center);
 
             .money_block {
-                @include mixins.font-size-lp(12px, 0.35px);
+                @include mix.font-size-lp(12px, 0.35px);
                 position: relative;
 
                 .dollar {
                     margin-left: 16px;
 
                     &::before {
-                        @include mixins.pseudo-elem(url('/src/icons/ico_dollar.svg'), absolute, 0, 0, 0, 0);
+                        @include mix.pseudo-elem(url('/src/icons/ico_dollar.svg'), absolute, 0, 0, 0, 0);
                     }
                 }
 
@@ -32,7 +32,7 @@ header {
                     margin-left: 28px;
 
                     &::before {
-                        @include mixins.pseudo-elem(url('/src/icons/ico_euro.svg'), absolute, 0, 0, 0, 75px);
+                        @include mix.pseudo-elem(url('/src/icons/ico_euro.svg'), absolute, 0, 0, 0, 75px);
                     }
                 }
             }
@@ -41,7 +41,7 @@ header {
                 position: relative;
                 transform: translateX(8%);
                 
-                @include mixins.flex-align(row, center, center);
+                @include mix.flex-align(row, center, center);
                 gap: 27px;
 
                     .icon {
@@ -51,67 +51,67 @@ header {
                         display: inline-block;
 
                         &_mail::before {
-                            @include mixins.social-icon('\e802', 17px, #858585);
+                            @include mix.social-icon('\e802', 17px, var.$dark-grey);
                         }
 
                         &_fb::before {
-                            @include mixins.social-icon('\e800', 17px, #AAAAAA);
+                            @include mix.social-icon('\e800', 17px, var.$lighter-grey);
                         }
 
                         &_tw::before {
-                            @include mixins.social-icon('\e804', 20px, #AAAAAA);
+                            @include mix.social-icon('\e804', 20px, var.$lighter-grey);
                         }
 
                         &_google::before {
-                            @include mixins.social-icon('\e801', 17px, #AAAAAA);
+                            @include mix.social-icon('\e801', 17px, var.$lighter-grey);
                         }
 
                         &_vk::before {
-                            @include mixins.social-icon('\e805', 20px, #838383);
+                            @include mix.social-icon('\e805', 20px, var.$light-grey);
                         }
 
                         &_rss::before {
-                            @include mixins.social-icon('\e803', 17px, #838383);
+                            @include mix.social-icon('\e803', 17px, var.$light-grey);
                         }
                       }
                 }
 
                 .pension_block {
-                    @include mixins.flex-align(row, center, center);
+                    @include mix.flex-align(row, center, center);
                 }
 
                 .pension {
                     padding-left: 19px;
                     position: relative;
 
-                    @include mixins.font-size-lp(13px, 0.35px);
+                    @include mix.font-size-lp(13px, 0.35px);
 
                     &::before {
-                        @include mixins.pseudo-elem(url('/src/icons/ico_pension.svg'), absolute, 0, 0, 75px, 0);
+                        @include mix.pseudo-elem(url('/src/icons/ico_pension.svg'), absolute, 0, 0, 75px, 0);
                     }
                 }
             
         }
 
         .header_main-content {
-            @include mixins.flex-align(row, space-between, center);
+            @include mix.flex-align(row, space-between, center);
 
             padding: 0 78px;
             position: relative;
             transform: translateY(50%);
 
             .header_main-block {
-                @include mixins.flex-align(row, center, center);
+                @include mix.flex-align(row, center, center);
 
                 max-width: 320px;
                 line-height: 22.5px;
             }
 
             .logo {
-                @include mixins.flex-align(column, center, center);
+                @include mix.flex-align(column, center, center);
 
                 .logo_text {
-                    @include mixins.font-size-lp(59px, 1.75px);
+                    @include mix.font-size-lp(59px, 1.75px);
                     padding-bottom: 24px;
                 }
 
@@ -125,17 +125,17 @@ header {
                     position: relative;
 
                     &::before {
-                        @include mixins.pseudo-elem(url('/src/icons/cloud_ico.svg'), absolute, 0, 0, 0, -20px);
+                        @include mix.pseudo-elem(url('/src/icons/cloud_ico.svg'), absolute, 0, 0, 0, -20px);
                     }
                 }
 
                 .info_block {
-                    @include mixins.font-size-lp(15px, 0);
+                    @include mix.font-size-lp(15px, 0);
                 }
             }
 
             .header_main-block:first-child {
-                @include mixins.font-size-lp(15px, 0.4px);
+                @include mix.font-size-lp(15px, 0.4px);
 
                 .text_block {
                     margin-left: 25px;
@@ -143,15 +143,15 @@ header {
             }
 
             .header_main-block:last-child {
-                @include mixins.font-size-lp(13px, 0.35px);
+                @include mix.font-size-lp(13px, 0.35px);
 
                 .text_block {
                     margin-left: 22px;
                 }
 
                 .info_block {
-                    @include mixins.font-size-lp(11px, 0);
-                    @include mixins.flex-align(row, stretch, center);
+                    @include mix.font-size-lp(11px, 0);
+                    @include mix.flex-align(row, stretch, center);
                 }
 
                 .time {
@@ -159,7 +159,7 @@ header {
                     position: relative;
 
                     &::before {
-                        @include mixins.pseudo-elem(url('/src/icons/ico_clock.svg'), absolute, 0, 0, 0, -20px);
+                        @include mix.pseudo-elem(url('/src/icons/ico_clock.svg'), absolute, 0, 0, 0, -20px);
                         transform: translateY(20%);
                     }
                 }
