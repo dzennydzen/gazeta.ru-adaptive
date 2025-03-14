@@ -1,6 +1,6 @@
-@use '../common/breakpoints' as breakpoints;
-@use '../common/variables' as variables;   
-@use '../common/mixins' as mixins;
+@use '../utils/breakpoints' as breakpoints;
+@use '../utils/variables' as variables;   
+@use '../utils/mixins' as mixins;
 
 @include breakpoints.desktop {
     .left_panel {

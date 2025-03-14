@@ -1,6 +1,6 @@
-@use './common/index' as *;
+@use './global' as *;
 @use './header/header' as *;
 @use './main/index'as *;
-@use './common/reset'as *;
+@use './utils/reset'as *;
 
 // $ sass --watch ./src/scss/index.scss:./src/css/style.css

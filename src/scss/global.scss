@@ -1,8 +1,8 @@
-@use 'extends' as *;
-@use 'variables' as *;
-@use 'mixins' as *;
+@use './utils/extends' as *;
+@use './utils/variables' as *;
+@use './utils/mixins' as *;
 @use 'fonts' as *;
-@use 'breakpoints' as *;
+@use './utils/breakpoints' as *;
 
 html, body {
     height: 100%; 
