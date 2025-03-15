@@ -254,7 +254,7 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(2, auto);
 }
-.news_block1 .breaking_news {
+.news_block1 .special_news {
   grid-row: span 2;
 }
 .news_block1 .big_news {
