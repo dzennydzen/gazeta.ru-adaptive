@@ -1,0 +1,16 @@
+@use '../utils/breakpoints' as breakpoints;
+@use '../utils/variables' as variables;   
+@use '../utils/mixins' as mixins;
+@use '../utils/extends' as extends;
+
+.news_block1 {
+    @include mixins.grid-casual(grid, repeat(4, auto), repeat(2, auto));
+
+    .breaking_news {
+        @include mixins.grid-stretch(row, 2);
+    }
+
+    .big_news {
+        @include mixins.grid-stretch(column, 2);
+    }
+}

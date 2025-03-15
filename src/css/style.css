@@ -249,6 +249,18 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   }
 }
 
+.news_block1 {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
+}
+.news_block1 .breaking_news {
+  grid-row: span 2;
+}
+.news_block1 .big_news {
+  grid-column: span 2;
+}
+
 @media (min-width: 1680px) {
   .left_panel {
     width: 80px;

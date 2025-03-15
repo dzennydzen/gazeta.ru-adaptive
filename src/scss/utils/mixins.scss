@@ -12,6 +12,16 @@
     flex-direction: $direction;
 }
 
+@mixin grid-casual($display, $grid-template-columns, $grid-template-rows) {
+    display: $display;
+    grid-template-columns: $grid-template-columns;
+    grid-template-rows: $grid-template-rows;
+}
+
+@mixin grid-stretch($type, $value) {
+    #{'grid-' + $type} : span $value;
+}
+
 //sizes
 
 @mixin size($width, $height) {
