@@ -125,7 +125,7 @@ header {
                     position: relative;
 
                     &::before {
-                        @include mix.pseudo-elem(url('/src/icons/cloud_ico.svg'), absolute, 0, 0, 0, -20px);
+                        @include mix.pseudo-elem(url('/src/icons/cloud_ico.svg'), absolute, 0, 0, 0, -22px);
                     }
                 }
 

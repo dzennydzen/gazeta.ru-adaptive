@@ -204,7 +204,7 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
     content: url("/src/icons/cloud_ico.svg");
     position: absolute;
     top: 0;
-    left: -20px;
+    left: -22px;
     right: 0;
     bottom: 0;
   }
