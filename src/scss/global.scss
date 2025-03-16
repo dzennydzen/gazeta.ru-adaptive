@@ -8,17 +8,34 @@ html, body {
     height: 100%; 
   }
 
-body { 
-    
+body {    
     * {
         border: 1px solid black;
         box-sizing: border-box;
         font-family: 'Inter-Regular';
+    }
+
+    h1, h2, h3 {
+        all: unset;
+        display: block;
     }
     
     .body_wrapper {
         border: 1px solid red;
 
         @include flex-align(row, center, stretch);
+    }
+
+    .visually-hidden {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: hidden;
+        white-space: nowrap;
+
+        font-size: 30px;
+
+        clip: rect(0, 0, 0, 0);
+        visibility: hidden;
     }
 }

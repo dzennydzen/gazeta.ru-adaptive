@@ -5,9 +5,31 @@
 
 .news_block1 {
     @include mixins.grid-casual(grid, repeat(4, auto), repeat(2, auto));
+    position: relative;
 
     .special_news {
         @include mixins.grid-stretch(row, 2);
+        position: relative;
+
+        // max-width: 332px;
+
+        .hour_news {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    
+            .block_title {
+                font-size: 16px;
+            }
+    
+            .sm_article_text {
+                font-size: 12px;
+            }
+    
+            .time_tag {
+                font-size: 11px; 
+            }
+        }
     }
 
     .big_news {

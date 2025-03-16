@@ -49,12 +49,26 @@ body * {
   box-sizing: border-box;
   font-family: "Inter-Regular";
 }
+body h1, body h2, body h3 {
+  all: unset;
+  display: block;
+}
 body .body_wrapper {
   border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: stretch;
+}
+body .visually-hidden {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 30px;
+  clip: rect(0, 0, 0, 0);
+  visibility: hidden;
 }
 
 header svg, header img, header .photo_block, header .text_block, header i, header .mail, header .icon {
@@ -253,9 +267,25 @@ header svg, header img, header .photo_block, header .text_block, header i, heade
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(2, auto);
+  position: relative;
 }
 .news_block1 .special_news {
   grid-row: span 2;
+  position: relative;
+}
+.news_block1 .special_news .hour_news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.news_block1 .special_news .hour_news .block_title {
+  font-size: 16px;
+}
+.news_block1 .special_news .hour_news .sm_article_text {
+  font-size: 12px;
+}
+.news_block1 .special_news .hour_news .time_tag {
+  font-size: 11px;
 }
 .news_block1 .big_news {
   grid-column: span 2;
