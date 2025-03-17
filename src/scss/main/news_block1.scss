@@ -1,38 +1,39 @@
 @use '../utils/breakpoints' as breakpoints;
-@use '../utils/variables' as variables;   
+@use '../utils/variables' as vars;   
 @use '../utils/mixins' as mixins;
 @use '../utils/extends' as extends;
 
 .news_block1 {
-    @include mixins.grid-casual(grid, repeat(4, auto), repeat(2, auto));
-    position: relative;
+    display: grid;
+    grid-template-columns: vars.$first-column-width repeat(3, vars.$other-column-width);
+    grid-template-rows: vars.$big-news-height vars.$small-news-height;
+    grid-template-areas: 
+        'hour_news big_news big_news main_news'
+        'hour_news article1 article2 article3';
 
     .special_news {
-        @include mixins.grid-stretch(row, 2);
-        position: relative;
-
-        // max-width: 332px;
-
-        .hour_news {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-    
-            .block_title {
-                font-size: 16px;
-            }
-    
-            .sm_article_text {
-                font-size: 12px;
-            }
-    
-            .time_tag {
-                font-size: 11px; 
-            }
-        }
+        grid-area: hour_news;
     }
 
     .big_news {
-        @include mixins.grid-stretch(column, 2);
+        grid-area: big_news;
+    }
+
+    .main_news {
+        grid-area: main_news;
+    }
+
+    .small_news {
+        &:nth-child(1) {
+            grid-area: article1;
+        }
+
+        &:nth-child(2) {
+            grid-area: article2;
+        }
+
+        &:last-child {
+            grid-area: article3;
+        }
     }
 }

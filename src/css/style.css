@@ -1,3 +1,4 @@
+/*news_block1*/
 @font-face {
   font-family: "FiraSans-Book";
   src: url("../fonts/FiraSans-Book.otf") format("otf"), url("../fonts/FiraSans-Book.woff") format("woff");
@@ -270,30 +271,27 @@ header .header_main-content .header_main-block:last-child .time::before {
 
 .news_block1 {
   display: grid;
-  grid-template-columns: repeat(4, auto);
-  grid-template-rows: repeat(2, auto);
-  position: relative;
+  grid-template-columns: 334px repeat(3, 332px);
+  grid-template-rows: 669px 494px;
+  grid-template-areas: "hour_news big_news big_news main_news" "hour_news article1 article2 article3";
 }
 .news_block1 .special_news {
-  grid-row: span 2;
-  position: relative;
-}
-.news_block1 .special_news .hour_news {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.news_block1 .special_news .hour_news .block_title {
-  font-size: 16px;
-}
-.news_block1 .special_news .hour_news .sm_article_text {
-  font-size: 12px;
-}
-.news_block1 .special_news .hour_news .time_tag {
-  font-size: 11px;
+  grid-area: hour_news;
 }
 .news_block1 .big_news {
-  grid-column: span 2;
+  grid-area: big_news;
+}
+.news_block1 .main_news {
+  grid-area: main_news;
+}
+.news_block1 .small_news:nth-child(1) {
+  grid-area: article1;
+}
+.news_block1 .small_news:nth-child(2) {
+  grid-area: article2;
+}
+.news_block1 .small_news:last-child {
+  grid-area: article3;
 }
 
 .left_panel {
