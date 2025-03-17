@@ -3,7 +3,7 @@
 @use '../utils/mixins' as mixins;
 @use 'news_block1' as *;
 
-@include breakpoints.desktop {
+
     .left_panel {
         @include mixins.size(80px, 1050px);
 
@@ -16,6 +16,7 @@
 
     .main_wrapper {
         width: 100%;
+        max-width: 1330px;
         border-width: 2px;
 
         .main_content {
@@ -39,4 +40,3 @@
         @include mixins.size(100%, 549px);
         background-color: black;
     }
-}

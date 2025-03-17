@@ -8,7 +8,10 @@ html, body {
     height: 100%; 
   }
 
-body {    
+body { 
+
+    @include flex-align(column, stretch, center);
+
     * {
         border: 1px solid black;
         box-sizing: border-box;
@@ -24,6 +27,7 @@ body {
         border: 1px solid red;
 
         @include flex-align(row, center, stretch);
+        max-width: $breakpoint_desktop;
     }
 
     .visually-hidden {

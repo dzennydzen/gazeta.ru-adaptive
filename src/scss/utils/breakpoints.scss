@@ -5,7 +5,13 @@
 
 
 @mixin desktop {
-    @media (min-width: $breakpoint_desktop) {
+    @media (width: $breakpoint_desktop) {
+      @content;
+    }
+  }
+
+@mixin test {
+    @media (max-width: $breakpoint_tablet) {
       @content;
     }
   }
