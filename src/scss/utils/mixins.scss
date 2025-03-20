@@ -23,6 +23,13 @@
 }
 
 //sizes
+@mixin calc-paddings-margins($unit, $type, $top, $right, $bottom, $left) {
+    #{$type}-top: #{$top}#{$unit};
+    #{$type}-right: #{$right}#{$unit};
+    #{$type}-bottom: #{$bottom}#{$unit};
+    #{$type}-left: #{$left}#{$unit};
+}
+
 
 @mixin size($width, $height) {
     width: $width;

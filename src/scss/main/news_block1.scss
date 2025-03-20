@@ -5,14 +5,35 @@
 
 .news_block1 {
     display: grid;
-    grid-template-columns: vars.$first-column-width repeat(3, vars.$other-column-width);
+    grid-template-columns: 28% repeat(3, auto);
     grid-template-rows: vars.$big-news-height vars.$small-news-height;
     grid-template-areas: 
         'hour_news big_news big_news main_news'
         'hour_news article1 article2 article3';
 
+    overflow: hidden;
+
     .special_news {
         grid-area: hour_news;
+
+        .hour_news {
+            @include mixins.flex-align(column, center, center);
+            @include mixins.calc-paddings-margins(px, padding, 34,71,71,71);
+
+            .block_title {
+                font-size: 16px;
+            }
+
+            .sm_article_text {
+                font-size: 12px;
+                text-align: center;
+                border: 0;
+            }
+    
+            .time_tag {
+                font-size: 11px; 
+            }
+        }
     }
 
     .big_news {

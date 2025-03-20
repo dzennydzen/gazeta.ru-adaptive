@@ -3,8 +3,8 @@
 @use '../utils/mixins' as mix;
 
 header {
-    svg, img, .photo_block, .text_block, i, .mail, .icon {
-        border: none;
+    * {
+        border: 0;
     }
 
         @include mix.size(100%, 360px);
